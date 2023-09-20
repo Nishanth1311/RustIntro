@@ -1,0 +1,6 @@
+1. Basic types and variables in rust
+2. Control flow
+3. Functions
+4. Iterators
+5. Pointers, Box, Options
+6. References, Ownership and Borrowing

@@ -1,5 +1,5 @@
 [package]
-name = "sll"
+name = "borrowing"
 version = "0.1.0"
 authors = ["Nishanth Sanjeevi <nishanthsanjeevi@hotmail.com>"]
 edition = "2021"

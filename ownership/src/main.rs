@@ -12,7 +12,7 @@ fn main() {
     // person1 loses his business as everyone goes to Person2
     person1.clear();
 
-    // Now, person1 and person2 both have coca-cola
+    // Now, person1 does not own anything and person2 owns coca-cola new
     println!("Person1: {}", person1); // Output: Person1: (owns nothing)
     println!("Person2: {}", person2); // Output: Person2: I own Coca-Cola new
     

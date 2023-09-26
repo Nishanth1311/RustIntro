@@ -1,4 +1,5 @@
 // Define a custom struct
+#[derive(Debug)] // Implement the Debug trait for Person
 struct Person {
     name: String,
     age: u32,
@@ -22,6 +23,9 @@ fn main() {
 
     // Dereferencing the box to access the custom struct
     println!("Boxed person: {:?}", *boxed_person);
+
+    let unboxed_person: Person = *boxed_person;
+    println!("Unboxed person name: {}, age: {}", unboxed_person.name, unboxed_person.age);
 
     // Automatic Cleanup
     // When boxes go out of scope, Rust automatically releases the heap-allocated memory.

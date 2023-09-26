@@ -45,7 +45,20 @@ fn main() {
         Err(err) => println!("Error: {}", err),
     }
 
+    fn do_all_math_operations(a: i32, b: i32) {
+        println!("Performing all math operations!");
+        println!("{} + {} = {}", a, b, add(a, b));
+        println!("{} - {} = {}", a, b, subtract(a, b));
+        println!("{} * {} = {}", a, b, multiply(a, b));
+        match divide(a, b) {
+            Ok(result_divide) => println!("{} / {} = {}", a, b, result_divide),
+            Err(err) => println!("Error: {}", err),
+        }
+    }
+
+    do_all_math_operations(10, 5);
+
     // Call the greet function with default parameters
     greet("Alice", "Hello!"); // Alice says: Hello!
-    greet("Bob", "Hi!");     // Bob says: Hi!
+    greet("Bob", "Hi!"); // Bob says: Hi!
 }

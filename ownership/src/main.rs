@@ -26,4 +26,10 @@ fn main() {
     // Now, person1 has the modified string, and person2's string is cleared
     println!("Person1: {}", person1); // Output: Person1: I own Coca-Cola new
     println!("Person2: {}", person2); // Output: Person2: (owns nothing)
+
+    // // Technically person1 takes up whatever person2 has
+    // person1 = person2;
+    // // now attempting to print person2 will throw an error
+    // println!("Person1: {}", person1); // Output: Person1: I own Coca-Cola new
+    // println!("Person2: {}", person2); // Output: Person2: (owns nothing)
 }

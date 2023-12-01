@@ -9,9 +9,8 @@ Sequence of learning:
 
 
 INTRODUCTION TO RUST
-|-|-|-|
 | Sl.No |   Folder    |           Description                             |
-|-|-|-|
+|---|---|---|
 |   0   | hello_world | Basic RUST program that prints "Hello World"      |
 |   1   | variables   | Basic RUST variable types, mutability, shadowing  |
 |   2   | iterator    | Control flow and iterators that are part of RUST  |
@@ -22,7 +21,6 @@ INTRODUCTION TO RUST
 |   7   | ownership   | Introduction to Ownership in RUST                 |
 |   8   | borrowing   | Introduction to Borrowing in RUST                 |
 |   9   | sll         | Singly linked list implementation in RUST         |
-|-|-|-|
 
 ADVANCED RUST PROBLEMS are inside the advanced_rust folder
 |-|-|-|

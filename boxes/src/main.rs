@@ -1,4 +1,5 @@
 // Define a custom struct
+#[derive(Debug)]    //if not added throws error 
 struct Person {
     name: String,
     age: u32,

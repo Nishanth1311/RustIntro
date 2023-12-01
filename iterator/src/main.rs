@@ -38,7 +38,7 @@ fn main() {
     // The `filter` method creates a new iterator that contains only the elements
     // that satisfy the given condition in the closure.
     // We filter and clone even numbers into a new vector.
-    let evens: Vec<i32> = numbers.iter().filter(|&&x| x % 2 == 0).cloned().collect();
+    let evens: Vec<i32> = numbers.iter().filter(|&&x| x % 2 == 0).cloned().collect();   //need to understand why double reference here and not in map()
     println!("Evens: {:?}", evens);
 
     // Using iterator methods: fold

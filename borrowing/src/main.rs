@@ -3,7 +3,7 @@ fn main() {
     let mut your_car = String::from("Your Car");
 
     // Your friend wants to borrow your car and modify it
-    let mut borrowed_car = &mut your_car;
+    let borrowed_car = &mut your_car;
 
     // Your friend can modify it temporarily
     borrowed_car.push_str("'s Color");

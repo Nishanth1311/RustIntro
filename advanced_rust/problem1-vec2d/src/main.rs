@@ -14,13 +14,14 @@
    The goal of this problem is for you to understand vectors better
 */
 
-fn dfs(mut island_map: &mut Vec<Vec<i32>>, i: usize, j: usize, rows: usize, cols: usize) {
+fn dfs(island_map: &mut Vec<Vec<i32>>, i: usize, j: usize, rows: usize, cols: usize) {
 
-    if i<0 || j<0 || i>=rows || j>=cols || island_map[i][j]!=1  {
+    if i>=rows || j>=cols || island_map[i][j]!=1  {
         return;
     }
 
     island_map[i][j] = 2;
+    //Vertical and Horizontal DFS calls
     dfs(island_map, i+1, j, rows, cols);
     if i>0 {
         dfs(island_map, i-1, j, rows, cols);
@@ -28,6 +29,19 @@ fn dfs(mut island_map: &mut Vec<Vec<i32>>, i: usize, j: usize, rows: usize, cols
     dfs(island_map, i, j+1, rows, cols);
     if j>0 {
         dfs(island_map, i, j-1, rows, cols);
+    }
+    // Diagonal DFS calls
+    if i > 0 && j > 0 {
+        dfs(island_map, i-1, j-1, rows, cols); 
+    }
+    if i > 0 && j < cols - 1 {
+        dfs(island_map, i-1, j+1, rows, cols); 
+    }
+    if i < rows - 1 && j > 0 {
+        dfs(island_map, i+1, j-1, rows, cols); 
+    }
+    if i < rows - 1 && j < cols - 1 {
+        dfs(island_map, i+1, j+1, rows, cols); 
     }
 }
 
@@ -70,6 +84,6 @@ fn main() {
     ];
 
     assert_eq!(solution("vec1", vec1, 3, 3), 2);
-    assert_eq!(solution("vec2", vec2, 3, 3), 2);
+    assert_eq!(solution("vec2", vec2, 3, 3), 1);
     assert_eq!(solution("vec3", vec3, 6, 5), 4);
 }

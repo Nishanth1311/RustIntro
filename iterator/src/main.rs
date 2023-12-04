@@ -19,7 +19,7 @@ fn main() {
     println!();
 
     // Creating an iterator
-    let mut iterator = numbers.iter();
+    let iterator = numbers.iter();
 
     // Looping over elements using the iterator
     println!("Looping over elements using an iterator:");
